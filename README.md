@@ -33,7 +33,7 @@ npm run build
 npm run preview
 ```
 
-The Vite production base is currently `/algoarena/` for a GitHub Pages project site with that repository name. Change `base` in `vite.config.ts` if the deployment path differs. No deployment is configured or triggered by this repository.
+The Vite production base is `/algoarena/`, matching this GitHub Pages project site. The workflow in `.github/workflows/pages.yml` runs tests, lint, and a production build, then deploys the `dist/` artifact to GitHub Pages whenever a commit is pushed to `main` (or the workflow is started manually). In the repository settings, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**. The source tree is not a deployable site by itself; the workflow publishes the Vite build output.
 
 ## Algorithms and trace behavior
 
